@@ -1,4 +1,7 @@
-import { Button } from "@/components/ui/button";
+import { DialogDescription } from "@radix-ui/react-dialog";
+import { Label } from "@radix-ui/react-label";
+import { FormEvent, useState } from "react";
+import { useAddTodoMutation } from "../redux/api/api";
 import {
   Dialog,
   DialogContent,
@@ -6,8 +9,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
+} from "../components/ui/dialog";
+import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
 import {
   Select,
   SelectContent,
@@ -15,12 +19,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { useAddTodoMutation } from "@/redux/api/api";
-
-import { DialogDescription } from "@radix-ui/react-dialog";
-import { Label } from "@radix-ui/react-label";
-import { FormEvent, useState } from "react";
+} from "../components/ui/select";
 
 const AddTodoModel = () => {
   const [task, setTask] = useState("");

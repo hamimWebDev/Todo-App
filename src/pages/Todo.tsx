@@ -1,6 +1,6 @@
 import React from "react";
-import Container from "@/components/ui/Container";
-import TodoContainer from "@/todo/TodoContainer";
+import Container from "../components/ui/Container";
+import TodoContainer from "../todo/TodoContainer";
 
 const Todo: React.FC = () => {
   return (

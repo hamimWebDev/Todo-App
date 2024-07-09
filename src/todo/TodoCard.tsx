@@ -1,6 +1,7 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/button";
+import { useDeleteTodoMutation, useUpdateTodoMutation } from "../redux/api/api";
 import UpdateTodoModel from "./UpdateTodoModel";
-import { useDeleteTodoMutation, useUpdateTodoMutation } from "@/redux/api/api";
+
 
 export type TItem = {
   _id: string;

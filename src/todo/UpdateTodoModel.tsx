@@ -1,4 +1,8 @@
-import { Button } from "@/components/ui/button";
+import { DialogDescription } from "@radix-ui/react-dialog";
+import { Label } from "@radix-ui/react-label";
+import { FormEvent, useState } from "react";
+import { TItem } from "./TodoCard";
+import { useUpdateTodoMutation } from "../redux/api/api";
 import {
   Dialog,
   DialogContent,
@@ -6,8 +10,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
+} from "../components/ui/dialog";
+import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
 import {
   Select,
   SelectContent,
@@ -15,12 +20,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { useUpdateTodoMutation } from "@/redux/api/api";
-import { DialogDescription } from "@radix-ui/react-dialog";
-import { Label } from "@radix-ui/react-label";
-import { FormEvent, useState } from "react";
-import { TItem } from "./TodoCard";
+} from "../components/ui/select";
 
 const UpdateTodoModel = ({ title, description, _id, priority }: TItem) => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -135,7 +135,9 @@ const UpdateTodoModel = ({ title, description, _id, priority }: TItem) => {
             </Select>
           </div>
           <DialogFooter>
-            <Button type="submit" disabled={isLoading}>Update Todo</Button>
+            <Button type="submit" disabled={isLoading}>
+              Update Todo
+            </Button>
           </DialogFooter>
         </form>
       </DialogContent>

@@ -1,8 +1,8 @@
 import TodoCard, { TItem } from "./TodoCard";
 import AddTodoModel from "./AddTodoModel";
 import TodoFilter from "./TodoFilter";
-import { useGetTodosQuery } from "@/redux/api/api";
 import { useState } from "react";
+import { useGetTodosQuery } from "../redux/api/api";
 
 const TodoContainer = () => {
   // from local state

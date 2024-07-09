@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,7 +7,8 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "../components/ui/dropdown-menu";
+import { Button } from "../components/ui/button";
 
 interface TodoFilterProps {
   priority: string;
@@ -33,7 +33,6 @@ const TodoFilter: React.FC<TodoFilterProps> = ({ priority, setPriority }) => {
           <DropdownMenuRadioItem value="high">High</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="medium">Medium</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="low">Low</DropdownMenuRadioItem>
-          
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>
